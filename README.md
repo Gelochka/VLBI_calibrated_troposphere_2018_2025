@@ -8,12 +8,15 @@ observational epoch. That they added to the constant value of troposphere and cl
 
 Each arcive containts following files:
 1) ***.ngs**: typical ngs-file.
-2) **trop_clock.dat**: file with troposphere parameters.
-3) ***.txt**: ngs-file  with troposphere calibation. New NGS file contains wet troposphere delay and
+2) **trop_clock.dat**: file with troposphere parameters. 
+MJD, first_station, second_station, source,  north-south gradient for first_station, north-south gradient for second_station,   east-west gradient for first_station,
+ east-west gradient for secind_station, clock offset.
+
+4) ***.txt**: ngs-file  with troposphere calibation. New NGS file contains wet troposphere delay and
 gradients and clock offset (ns).
-4) **collocat.opt**: This file contains a list of all stations.
-5) **baseline.eli**: If exists, contains baselines that needs to be cut out from the observations.
-6) **breaks.res**:  If exists, contains  clock breaks on stations.
+5) **collocat.opt**: This file contains a list of all stations.
+6) **baseline.eli**: If exists, contains baselines that needs to be cut out from the observations.
+7) **breaks.res**:  If exists, contains  clock breaks on stations.
 
 #  Example of *.txt file structure:
 Below is an example of a block from  *.txt file. 
