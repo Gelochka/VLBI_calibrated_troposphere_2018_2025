@@ -32,8 +32,6 @@ east-west gradient for stations 1st and 2nd, clock offset.
     21.800     7.704   863.006   953.000    61.389    66.773 0 0             506 </pre>  
 
 All you need now is subtract  troposphere and clock parameters (line 504) and process experiment using the standard least squares method.
-
-All you need now is subtract  troposphere and clock parameters (line 504) and process experiment using the standard least squares method.
  ```fortran  
     IF (ICD1.EQ.4) then
       
