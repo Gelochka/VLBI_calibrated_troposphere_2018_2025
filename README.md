@@ -32,6 +32,25 @@ east-west gradient for stations 1st and 2nd, clock offset.
     21.800     7.704   863.006   953.000    61.389    66.773 0 0             506 </pre>  
 
 All you need now is subtract  troposphere and clock parameters (line 504) and process experiment using the standard least squares method.
+
+All you need now is subtract  troposphere and clock parameters (line 504) and process experiment using the standard least squares method.
+ ```fortran  
+    IF (ICD1.EQ.4) then
+      
+        READ (LINE,310) tr1, tr2, trgn1, trgn2, trge1, trge2, delay_c
+        
+
+310     format (f7.3,1x,f7.3,4(1x,f7.4),f15.3)
+
+C     DELAY IS IN NANOSECS
+
+         DELAY_t = tr2 - tr1 + trgn2 - trgn1 + trge2 - trge1                    !  delay in nsec
+
+         delay = delay - delay_t  - delay_c    !    nsec     
+
+      end if 
+ ```
+
 # How to downoald all files?
  You can download individual experiments by cliking on zip-archive and download row file.
 
