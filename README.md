@@ -32,6 +32,15 @@ east-west gradient for stations 1st and 2nd, clock offset.
     21.800     7.704   863.006   953.000    61.389    66.773 0 0             506 </pre>  
 
 All you need now is subtract  troposphere and clock parameters (line 504) and process experiment using the standard least squares method.
+
+**tr1**  --- troposphere for the 1st station (in nsec), **tr2** --- troposphere for the  2nd  station (in nsec).
+
+**trgn1** --- north-south gradient for  1st stations (in nsec) , **trgn2** --- north-south gradient for 2nd station (in nsec).
+
+**trge1** --- east-west gradient for  1st stations (in nsec),  **trge2** --- east-west gradient for 2nd station (in nsec).
+
+**delay_c** ---  clock offset (in nsec).
+
  ```fortran  
     IF (ICD1.EQ.4) then
       
